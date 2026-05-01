@@ -122,7 +122,6 @@ When using the core files, the demo images, posts, and pages are all included wi
     * `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
     * `description`
     * `author`
-    * `twitter_username` (Optional)
     * `facebook_username` (Optional)
     * `github_username` (Optional)
     * `linkedin_username` (Optional)
