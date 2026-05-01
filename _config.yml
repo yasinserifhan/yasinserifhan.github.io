@@ -2,17 +2,17 @@ title:              Yassin
 email:              yasinserifhan@gmail.com
 description:        Pleasure of the tears!
 author:             Yassin
-baseurl:            "/blog"
+baseurl:            ""
 url:                "https://yasinserifhan.github.io"
 
 # Social Profiles
 github_username:    yasinserifhan
-facebook_username:  Yasin Şerifhan Berberoğlu
-instagram_username:  Yasin Şerifhan Berberoğlu
-linkedin_username:  Yasin Şerifhan Berberoğlu
+facebook_username:  yasinserifhan
+instagram_username:  yasinserifhan
+linkedin_username:  yasin-berberoglu
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   G-SCV0ZFN2RR # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
