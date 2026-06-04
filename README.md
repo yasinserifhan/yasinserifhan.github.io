@@ -1,4 +1,4 @@
-```markdown
+
 # Yasin Şerifhan Berberoğlu - Personal Website & Blog
 
 Welcome to the repository for my personal portfolio and blog. Hosted on GitHub Pages and powered by Jekyll, this clean and responsive site serves as a central hub for my academic projects, technical writing, and professional background in Artificial Intelligence Engineering.
