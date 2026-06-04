@@ -1,3 +1,4 @@
+```markdown
 # Yasin Şerifhan Berberoğlu - Personal Website & Blog
 
 Welcome to the repository for my personal portfolio and blog. Hosted on GitHub Pages and powered by Jekyll, this clean and responsive site serves as a central hub for my academic projects, technical writing, and professional background in Artificial Intelligence Engineering.
@@ -25,3 +26,32 @@ If you'd like to run this site locally to experiment with the code or test new p
 2. Clone this repository:
 ```bash
    git clone [https://github.com/yasinserifhan/yasinserifhan.github.io.git](https://github.com/yasinserifhan/yasinserifhan.github.io.git)
+
+```
+
+3. Navigate into the directory and install the dependencies:
+
+```bash
+   cd yasinserifhan.github.io
+   bundle install
+
+```
+
+4. Build and serve the site locally:
+
+```bash
+   bundle exec jekyll serve
+
+```
+
+5. Open your browser and visit `http://localhost:4000`.
+
+## 📬 Connect
+
+Feel free to explore the live site here: **[yasinserifhan.github.io](https://www.google.com/search?q=https://yasinserifhan.github.io/)**
+
+You can also reach me directly through the **Contact** section on the site to discuss AI architectures, competitive programming, or potential collaborations!
+
+```
+
+```
