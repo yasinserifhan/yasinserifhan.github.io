@@ -1,0 +1,34 @@
+# Shown on the home page (newest first). Edit freely.
+- role: Research Assistant
+  org: Hacettepe University
+  period: Apr 2026 – present
+  summary: >-
+    Computer vision for single-cell analysis: single-cell morphological
+    profiling with Cellpose-based segmentation and graph representation
+    learning. The lab code is unpublished.
+
+- role: Forecasting developer · TEKNOFEST 2026
+  org: AI-Powered Linehaul Logistics Optimization Competition
+  period: 2026
+  summary: >-
+    Team project on Hepsiburada's linehaul network. I built the route-level
+    7-day demand forecasting component.
+  link: /projects/teknofest-lojistik/
+
+- role: Participant · ranked 16th of 130
+  org: inzva Algorithm Winter Camp
+  period: 2026
+  summary: Competitive programming and algorithms camp.
+
+- role: R&D Coordinator
+  org: Hacettepe Artificial Intelligence Society
+  period: 2023 – 2025
+  summary: Coordinated research and development activities for the student AI society.
+
+- role: B.Sc. Artificial Intelligence Engineering
+  org: Hacettepe University (English-taught)
+  period: Final year
+  summary: >-
+    Includes the AIN442 NLP practicum; its from-scratch assignments are
+    under Projects.
+  link: /projects/nlp-442/

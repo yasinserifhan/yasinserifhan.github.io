@@ -1,0 +1,20 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+wide: true
+eyebrow: Portfolio
+lead: >-
+  Machine learning, NLP and software projects. Most come with public code; the
+  two marked "Code not public" are described here without it.
+---
+{%- assign projects = site.projects | sort: 'order' -%}
+<div class="grid grid-2">
+  {% for project in projects %}
+    {% include project-card.html project=project %}
+  {% endfor %}
+</div>
+
+<p class="muted more-on-github">
+  More on <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>.
+</p>

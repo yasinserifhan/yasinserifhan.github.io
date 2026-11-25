@@ -1,0 +1,4 @@
+{%- assign cv_file = site.static_files | where: 'path', site.cv_path | first -%}
+{%- if cv_file -%}
+<a class="btn {{ include.class | default: 'btn-ghost' }}" href="{{ site.cv_path | relative_url }}" target="_blank" rel="noopener">{% include icon.html name='file' %}Download CV</a>
+{%- endif -%}

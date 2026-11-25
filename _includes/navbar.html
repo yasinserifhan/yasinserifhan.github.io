@@ -1,26 +1,23 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
-      <i class="fa fa-bars"></i>
+{%- assign path = page.url | default: '/' -%}
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true">YB</span>
+      <span class="brand-name">{{ site.short_name | default: site.title }}</span>
+    </a>
+
+    <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+      {% include icon.html name='menu' %}
     </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
-        </li>
-      </ul>
-    </div>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="{{ '/projects/' | relative_url }}" {% if path contains '/projects' %}aria-current="page"{% endif %}>Projects</a>
+      <a href="{{ '/about/' | relative_url }}" {% if path contains '/about' %}aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/posts/' | relative_url }}" {% if path contains '/posts' or page.layout == 'post' %}aria-current="page"{% endif %}>Writing</a>
+      <a href="{{ '/contact/' | relative_url }}" {% if path contains '/contact' %}aria-current="page"{% endif %}>Contact</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        {% include icon.html name='moon' %}{% include icon.html name='sun' %}
+      </button>
+    </nav>
   </div>
-</nav>
+</header>

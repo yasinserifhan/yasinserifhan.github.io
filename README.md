@@ -1,57 +1,61 @@
+# Yasin Şerifhan Berberoğlu · Portfolio
 
-# Yasin Şerifhan Berberoğlu - Personal Website & Blog
+Source for [yasinserifhan.github.io](https://yasinserifhan.github.io/), my portfolio and blog.
+It's built with Jekyll and hosted on GitHub Pages, which builds the site automatically on every push to `master`.
 
-Welcome to the repository for my personal portfolio and blog. Hosted on GitHub Pages and powered by Jekyll, this clean and responsive site serves as a central hub for my academic projects, technical writing, and professional background in Artificial Intelligence Engineering.
+## Sections
 
-## 🚀 Overview
+- **Home**: intro, availability, selected projects, experience, toolbox and latest writing.
+- **Projects**: every project as a card, each with its own detail page.
+- **About**: background, interests and what I'm looking for.
+- **Writing**: blog posts.
+- **Contact**: a [Formspree](https://formspree.io/) form plus email and LinkedIn.
 
-This website is designed to highlight my work and share insights from my research. The core sections of the site include:
+## Where to edit things
 
-*   **Posts:** A collection of my technical articles, research notes, and project summaries. You'll find writings focused on my core interests—including Large Language Models (LLMs), Retrieval-Augmented Generation (RAG) pipelines, and AI security—as well as broader reflections on software engineering and emerging tech trends.
-*   **About Me:** An overview of my academic journey at Hacettepe University, my research collaborations, and leadership roles, such as my work with the Hacettepe Artificial Intelligence Society. It also features a glimpse into my life beyond the keyboard, including my marathon preparation, music, and other evolving personal interests.
-*   **Contact:** A functional contact form powered by Formspree, making it easy to reach out for research collaborations, academic discussions, or professional opportunities in the AI, defense, fintech, or healthtech sectors.
+| What | File |
+|---|---|
+| Name, tagline, availability, social links, Formspree ID, Analytics ID | `_config.yml` |
+| Projects (one Markdown file each; `featured: true` puts it on the home page, `order` sorts it) | `_projects/*.md` |
+| Experience timeline | `_data/experience.yml` |
+| Toolbox / skills | `_data/skills.yml` |
+| Blog posts | `_posts/YYYY-MM-DD-title.html` or `.md` |
+| Styles (plain CSS, light and dark themes) | `assets/css/main.css` |
+| CV | put a PDF at `assets/files/Yasin-Berberoglu-CV.pdf`; the "Download CV" buttons appear automatically |
 
-## 🛠️ Tech Stack & Features
+### Adding a project
 
-*   **Framework:** [Jekyll](https://jekyllrb.com/)
-*   **Hosting:** GitHub Pages
-*   **Styling:** Custom Bootstrap integration (adapted from the Clean Blog theme)
-*   **Contact Form:** [Formspree](https://formspree.io/) API
+Create `_projects/my-project.md`:
 
-## 💻 Local Development
+```yaml
+---
+title: My Project
+subtitle: Short context · stack
+summary: One or two sentences for the card.
+metric: "Headline result"
+tags: [PyTorch, NLP]
+repo: https://github.com/yasinserifhan/my-project   # leave out and set `private: true` if the code isn't public
+role: Personal project
+order: 7
+featured: false
+---
 
-If you'd like to run this site locally to experiment with the code or test new posts:
+Longer write-up in Markdown.
+```
 
-1. Ensure you have [Ruby](https://www.ruby-lang.org/) and [Bundler](https://bundler.io/) installed.
-2. Clone this repository:
+## Local preview
+
+With Docker (no Ruby install needed):
+
 ```bash
-   git clone [https://github.com/yasinserifhan/yasinserifhan.github.io.git](https://github.com/yasinserifhan/yasinserifhan.github.io.git)
-
+docker run --rm -it -p 4000:4000 -v "${PWD}:/srv/site" -v portfolio-gems:/usr/local/bundle -w /srv/site ruby:3.3 \
+  sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload"
 ```
 
-3. Navigate into the directory and install the dependencies:
+Or with Ruby and Bundler installed: `bundle install`, then `bundle exec jekyll serve`.
 
-```bash
-   cd yasinserifhan.github.io
-   bundle install
+Then open <http://localhost:4000>.
 
-```
+## Credits
 
-4. Build and serve the site locally:
-
-```bash
-   bundle exec jekyll serve
-
-```
-
-5. Open your browser and visit `http://localhost:4000`.
-
-## 📬 Connect
-
-Feel free to explore the live site here: **[yasinserifhan.github.io](https://www.google.com/search?q=https://yasinserifhan.github.io/)**
-
-You can also reach me directly through the **Contact** section on the site to discuss AI architectures, competitive programming, or potential collaborations!
-
-```
-
-```
+Started from the [Clean Blog](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) Jekyll theme by Start Bootstrap (MIT); the current design and layouts are custom.

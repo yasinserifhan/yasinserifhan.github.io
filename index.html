@@ -1,4 +1,114 @@
 ---
-layout: home
-background: '/img/bg-index.jpg'
+layout: default
 ---
+{%- assign featured = site.projects | where: 'featured', true | sort: 'order' -%}
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">{{ site.role }} · {{ site.location }}</p>
+    <h1 class="hero-title">Hi, I'm Yasin. I build machine learning systems <span class="accent">end to end</span>.</h1>
+    <p class="hero-lead">
+      Final-year AI Engineering student at Hacettepe University and research assistant
+      working on computer vision for single-cell analysis. I care about leakage-free
+      features, honest validation and models that run on local hardware.
+    </p>
+
+    <div class="availability">
+      <span class="dot" aria-hidden="true"></span>
+      <p>{{ site.availability }}</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">See my projects {% include icon.html name='arrow' %}</a>
+      <a class="btn btn-ghost" href="{{ '/contact/' | relative_url }}">{% include icon.html name='mail' %}Get in touch</a>
+      {% include cv-button.html %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="work-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="work-title">Selected work</h2>
+      <a class="link-more" href="{{ '/projects/' | relative_url }}">All projects {% include icon.html name='arrow' %}</a>
+    </div>
+    <div class="grid grid-2">
+      {% for project in featured %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="now-title">
+  <div class="container split">
+    <div>
+      <h2 id="now-title">Experience</h2>
+      <p class="muted">Research, competitions and community work.</p>
+    </div>
+    <ol class="timeline">
+      {% for item in site.data.experience %}
+      <li>
+        <p class="timeline-period">{{ item.period }}</p>
+        <h3>{% if item.link %}<a href="{{ item.link | relative_url }}">{{ item.role }}</a>{% else %}{{ item.role }}{% endif %}</h3>
+        <p class="timeline-org">{{ item.org }}</p>
+        <p>{{ item.summary }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="skills-title">
+  <div class="container split">
+    <div>
+      <h2 id="skills-title">Toolbox</h2>
+      <p class="muted">What I reach for, grouped by area.</p>
+    </div>
+    <dl class="skills">
+      {% for s in site.data.skills %}
+      <div class="skill-row">
+        <dt>{{ s.group }}</dt>
+        <dd><ul class="tags">{% for i in s.items %}<li>{{ i }}</li>{% endfor %}</ul></dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="section" aria-labelledby="writing-title">
+  <div class="container split">
+    <div>
+      <h2 id="writing-title">Writing</h2>
+      <p class="muted">Notes on learning, building and thinking.</p>
+    </div>
+    <ul class="post-list">
+      {% for post in site.posts limit: 3 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          <span class="post-title">{{ post.title }}</span>
+          {% if post.subtitle %}<span class="post-sub">{{ post.subtitle }}</span>{% endif %}
+        </a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container">
+    <div class="cta">
+      <div>
+        <h2>Let's work together</h2>
+        <p>Looking for a junior ML / AI engineer or a long-term intern? I'd love to hear from you.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Contact me {% include icon.html name='arrow' %}</a>
+        {% include cv-button.html %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+{%- assign p = include.project -%}
+<article class="card project-card">
+  <div class="card-top">
+    <p class="eyebrow">{{ p.subtitle }}</p>
+    {% if p.private %}<span class="badge badge-muted">{% include icon.html name='lock' %}Code not public</span>{% endif %}
+  </div>
+  <h3 class="card-title"><a class="stretched" href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+  <p class="card-text">{{ p.summary }}</p>
+  {% if p.metric %}<p class="metric">{{ p.metric }}</p>{% endif %}
+  <ul class="tags" aria-label="Technologies">
+    {% for t in p.tags %}<li>{{ t }}</li>{% endfor %}
+  </ul>
+  <div class="card-links">
+    <a href="{{ p.url | relative_url }}">Details {% include icon.html name='arrow' %}</a>
+    {% if p.repo %}<a class="above" href="{{ p.repo }}" target="_blank" rel="noopener">{% include icon.html name='github' %}Code</a>{% endif %}
+  </div>
+</article>

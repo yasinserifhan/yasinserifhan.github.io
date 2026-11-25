@@ -1,0 +1,15 @@
+# Shown on the home page. Each group is one row.
+- group: Machine learning
+  items: [PyTorch, TensorFlow / Keras, scikit-learn, XGBoost, Prophet]
+
+- group: NLP & LLMs
+  items: [BERT fine-tuning, RAG, Ollama, Local LLMs, Tokenization]
+
+- group: Computer vision
+  items: [U-Net, Cellpose, Segmentation, Albumentations]
+
+- group: Data
+  items: [Python, Pandas, NumPy, SQL, Time-series validation]
+
+- group: Software
+  items: [Java 17, Spring Boot, Vaadin, Docker, Git, Linux]

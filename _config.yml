@@ -1,24 +1,69 @@
-title:              Yassin
+title:              Yasin Şerifhan Berberoğlu
+short_name:         Yasin Berberoğlu
 email:              yasinserifhan@gmail.com
-description:        Pleasure of the tears!
-author:             Yassin
+description:        >-
+  AI Engineering student at Hacettepe University and research assistant in
+  computer vision. I build ML systems end to end, from leakage-free features
+  and honest validation to models that run on local hardware.
+author:             Yasin Şerifhan Berberoğlu
+lang:               en
 baseurl:            ""
 url:                "https://yasinserifhan.github.io"
 
-# Social Profiles
+# Hero
+role:               AI Engineering student · Research assistant
+location:           Ankara, Türkiye
+availability:       >-
+  Open to junior ML / AI engineer roles and long-term internships, remote
+  (EU / global) or in Ankara. Available full-time from spring 2027.
+
+# Put your CV at this path to show the "CV" buttons (they stay hidden until the file exists).
+cv_path:            /assets/files/Yasin-Berberoglu-CV.pdf
+
+# Contact form (Formspree)
+formspree_id:       xeewopbp
+
+# Social profiles
 github_username:    yasinserifhan
-facebook_username:  yasinserifhan
-instagram_username:  yasinserifhan
 linkedin_username:  yasin-berberoglu
 
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   G-SCV0ZFN2RR # out your google-analytics code
+# Google Analytics 4 measurement ID (leave empty to disable)
+google_analytics:   G-SCV0ZFN2RR
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 # Build settings
 markdown:           kramdown
-paginate:           5
+paginate:           10
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - bin
+  - vendor
+  - node_modules
+  - .jekyll-cache

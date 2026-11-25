@@ -1,18 +1,46 @@
 ---
 layout: page
-title: About Me
-description: If you that curious about me!.
-background: '/img/bg-about.jpg'
+title: About me
+permalink: /about/
+eyebrow: About
+lead: >-
+  AI Engineering student, research assistant and someone who likes to know how
+  things think.
 ---
+<div class="prose">
+  <p>
+    I'm Yasin, a final-year Artificial Intelligence Engineering student at
+    Hacettepe University, where the programme is taught in English. Since April
+    2026 I've been a research assistant working on computer vision for
+    single-cell analysis: single-cell morphological profiling with
+    Cellpose-based segmentation and graph representation learning.
+  </p>
+  <p>
+    I like building ML systems end to end. In practice that means spending as
+    much time on leakage-free features and honest validation as on the model
+    itself, and caring whether a model can run on local hardware. My interests
+    are large language models, retrieval-augmented generation (RAG) and AI
+    security, alongside forecasting and computer vision.
+  </p>
+  <p>
+    Outside the lab I compete in algorithm events (16th of 130 at the inzva
+    Algorithm Winter Camp 2026) and from 2023 to 2025 I was R&amp;D Coordinator
+    at the Hacettepe Artificial Intelligence Society.
+  </p>
 
-<h1>TR</h1>
-<p>Bu blog sayfasını oluşturmamdaki asıl sebep kendimi bu konularda eksik hissetmem ve bir projeyle başlamak istememdi genel olarak bunu yıllarca kimsenin görmücek olması beni rahatlatıyor.</p>
-<p>Yapay Zeka müh. 3. sınıf öğrencisiyim bölümü seviyor ve bu konularda ilerlemek istiyorum genel olarak ilgimi kaybettiğim dönemler olsada yine burdayım ve bu sefer daha somut dönütlerle hayatımı sorumluluklarıma göre şekillendirmek istiyorum.</p>
-<p>Gitar çalmak, kendimi müzik konularında geliştimekten hoşlanıyorum; aynı zamanda kendimi psikoloji konularına yatkın hissediyorum bu bölümü seçme nedenimde buydu bir bilgisayar nasıl düşünür.</p>
+  <h2>Beyond the keyboard</h2>
+  <p>
+    I play the guitar and keep working on my music. I'm also drawn to
+    psychology, which is part of why I chose this field in the first place: I
+    wanted to understand how a computer "thinks". Lately I've been preparing
+    for a marathon.
+  </p>
 
+  <h2>What I'm looking for</h2>
+  <p>{{ site.availability }}</p>
+</div>
 
-<h1>ENG</h1>
-<p>The main reason I created this blog is that I felt a lack of experience in these areas and wanted to kickstart things with a project. Honestly, the thought that no one will see this for years gives me a sense of comfort.</p>
-<p>I’m currently a third-year Artificial Intelligence Engineering student. I love my field and want to pursue a career in it. Although there are times when I lose interest, I always find my way back, and this time, I want to shape my life around my responsibilities with more tangible results.</p>
-<p>Outside of academics, I enjoy playing the guitar and improving my musical skills. I also feel a natural affinity for psychology; in fact, that was one of the reasons I chose this major: to understand the core of "how a computer thinks."</p>
-
+<div class="actions">
+  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">{% include icon.html name='mail' %}Get in touch</a>
+  {% include cv-button.html %}
+</div>

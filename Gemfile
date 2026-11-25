@@ -1,11 +1,13 @@
 source "https://rubygems.org"
 
-gem "jekyll", ">= 3.8.5"
+# Same Jekyll and plugin versions that GitHub Pages uses to build the live site.
+gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-paginate", "~> 1.1.0"
+  gem "jekyll-feed"
+  gem "jekyll-paginate"
   gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
