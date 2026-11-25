@@ -8,12 +8,15 @@ summary: >-
 metric: "3 roles · PDF evaluations · Docker"
 tags: [Java 17, Spring Boot, Spring Security, JPA]
 repo: https://github.com/yasinserifhan/mentorship-crm
-role: Personal project
+role: My own project, built during my internship at Monad Yazılım
+year: 2025
 order: 3
 featured: true
 ---
 
-A personal project, not code written for or owned by an internship employer.
+I built this as my own project during my software engineering internship at
+Monad Yazılım (June – September 2025). The code is mine, not code owned by
+the employer.
 
 ## Features
 

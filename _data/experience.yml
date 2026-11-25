@@ -20,6 +20,15 @@
   period: 2026
   summary: Competitive programming and algorithms camp.
 
+- role: Software Engineer Intern
+  org: Monad Yazılım A.Ş.
+  period: Jun 2025 – Sep 2025
+  summary: >-
+    Java and Spring Boot work. During the internship I built a role-based
+    mentorship CRM as my own project with Vaadin Flow 24, Spring Boot 3 and
+    Spring Security, with a JPA data model tuned to avoid N+1 queries.
+  link: /projects/mentorship-crm/
+
 - role: R&D Coordinator
   org: Hacettepe Artificial Intelligence Society
   period: 2023 – 2025
